@@ -26,6 +26,13 @@ class MainScreenViewController : UITabBarController {
         goToMainScreen()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     func goToMainScreen()
     {
         self.presentedViewController?.dismiss(animated: true, completion: {
